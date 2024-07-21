@@ -5,14 +5,12 @@ import { Image_Slider } from './constants'
 
 const [activeImage,setActiveImage] = useState(0);
 
-
-
 useEffect(()=>{
   const timer = setInterval(()=>{ (activeImage < Image_Slider.length-1)?setActiveImage(activeImage + 1) : setActiveImage(0)},4000);
  return ()=> {clearInterval(timer)}
 },[activeImage])
 
-  
+
   const nextImage = ()=>{
      return (activeImage < Image_Slider.length-1)?setActiveImage(activeImage + 1) : setActiveImage(0)
   }
