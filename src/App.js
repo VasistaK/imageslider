@@ -20,14 +20,16 @@ useEffect(()=>{
   }
   return (   
     <div>   
-        <div className='flex border-2 border-cyan-800 justify-evenly mt-2'>
-         <button onClick = {previousImage} className = '' >Previous</button>
-         <div className='flex'> 
-           {Image_Slider.map((x,i)=>{ return <img src={x} alt="wallpaper" key={i} className = {"min-w-[400px] max-h-[400px] " + (activeImage === i ? "block" : "hidden") }/>})}
+        <div className='bg-gray-100'>
+         <div className='flex justify-center'> 
+           {Image_Slider.map((x,i)=>{ return <img src={x} alt="wallpaper" key={i} className = {"w-[%]  " + (activeImage === i ? "block" : "hidden") }/>})}
            </div>
-           <button onClick={nextImage}>Next</button>
+          <div className='flex justify-around pt-4'>
+           <button onClick = {previousImage} className = 'p-2 border-2 border-gray-400 mt-2 bg-white' >Previous</button>
+           <button onClick={nextImage} className = 'px-5 border-2 border-gray-400 mt-2 bg-white'>Next</button>
+           </div>
    </div>
-   <div className='flex justify-center mt-2'>
+   <div className='flex justify-center mt-9'>
     {Image_Slider.map((x,i)=>{return <button onClick={()=>{setActiveImage(i)}} className='mr-2  border-2 border-cyan-400 p-4'>{i}</button>})}</div>
    </div>
   )
