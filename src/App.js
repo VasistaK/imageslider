@@ -22,7 +22,7 @@ useEffect(()=>{
     <div>   
         <div className='bg-gray-100'>
          <div className='flex justify-center'> 
-           {Image_Slider.map((x,i)=>{ return <img src={x} alt="wallpaper" key={i} className = {"w-[%]  " + (activeImage === i ? "block" : "hidden") }/>})}
+           {Image_Slider.map((x,i)=>{ return <img src={x} alt="wallpaper" key={i} className = {"w-[%] h-[400px]  " + (activeImage === i ? "block" : "hidden") }/>})}
            </div>
           <div className='flex justify-around pt-4'>
            <button onClick = {previousImage} className = 'p-2 border-2 border-gray-400 mt-2 bg-white' >Previous</button>
